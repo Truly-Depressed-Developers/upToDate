@@ -10,7 +10,7 @@ const Nav = () => {
   const [active, setActive] = React.useState(pathname);
 
   return (
-    <div className="flex justify-around border py-4">
+    <div className="flex justify-around border-t py-4">
       <button onClick={() => setActive("/")}>
         <Link href="/">
           <IconHome2
