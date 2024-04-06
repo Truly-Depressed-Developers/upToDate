@@ -1,36 +1,47 @@
 "use client";
 
-import { NavElement } from "@/lib/types";
+import React from "react";
 import { IconCompass, IconHome2, IconUser } from "@tabler/icons-react";
 import Link from "next/link";
-import React from "react";
+import { usePathname } from "next/navigation";
 
 const Nav = () => {
-  const [active, setActive] = React.useState<NavElement>("home");
+  const pathname = usePathname();
+  const [active, setActive] = React.useState(pathname);
 
   return (
-    <div className="flex justify-around border p-2">
-      <button onClick={() => setActive("home")}>
+    <div className="flex justify-around border py-4">
+      <button onClick={() => setActive("/")}>
         <Link href="/">
           <IconHome2
             size={36}
-            className={active === "home" ? "text-primary" : ""}
+            className={
+              active === "/" ? "scale-110 text-primary transition-all" : ""
+            }
           />
         </Link>
       </button>
-      <button onClick={() => setActive("explore")}>
-        <Link href="/">
+      <button onClick={() => setActive("/explore")}>
+        <Link href="/explore">
           <IconCompass
             size={36}
-            className={active === "explore" ? "text-primary" : ""}
+            className={
+              active === "/explore"
+                ? "scale-110 text-primary transition-all"
+                : ""
+            }
           />
         </Link>
       </button>
-      <button onClick={() => setActive("profile")}>
-        <Link href="/">
+      <button onClick={() => setActive("/profile")}>
+        <Link href="/profile">
           <IconUser
             size={36}
-            className={active === "profile" ? "text-primary" : ""}
+            className={
+              active === "/profile"
+                ? "scale-110 text-primary transition-all"
+                : ""
+            }
           />
         </Link>
       </button>
