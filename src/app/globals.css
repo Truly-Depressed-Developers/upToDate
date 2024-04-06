@@ -55,7 +55,19 @@
     @apply border-border;
   }
 
+  html {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #333;
+    padding: 32px;
+  }
+
   body {
     @apply bg-background text-foreground;
+    width: 428px;
+    height: 926px;
+    background-color: #eee;
+    overflow: hidden;
   }
 }
