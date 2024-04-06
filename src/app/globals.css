@@ -47,10 +47,7 @@
     --input: 12 6.5% 15.1%;
     --ring: 35.5 91.7% 32.9%;
   }
-}
 
-
-@layer base {
   * {
     @apply border-border;
   }
@@ -67,7 +64,8 @@
     @apply bg-background text-foreground;
     width: 428px;
     height: 926px;
-    background-color: #eee;
     overflow: hidden;
+    display: flex;
+    flex-direction: column;
   }
 }
