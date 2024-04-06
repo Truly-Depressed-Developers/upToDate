@@ -1,4 +1,5 @@
 export type Influencer = {
+  image: string;
   name: string;
   description: string;
   socials: {
@@ -8,3 +9,5 @@ export type Influencer = {
     x: { link: string; isFollowing: boolean };
   };
 };
+
+export type InfluencerWithoutImage = Omit<Influencer, "image">;

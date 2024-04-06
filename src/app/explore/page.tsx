@@ -1,5 +1,6 @@
 import InfluencerCard from "@/components/InfluencerCard";
 import { Input } from "@/components/ui/input";
+import { influencers } from "@/data/people";
 import { IconSearch } from "@tabler/icons-react";
 import React from "react";
 
@@ -20,18 +21,8 @@ const Explore = () => {
         </span>
       </div>
       <div className="max-h-[82.75vh] overflow-auto">
-        {[...Array(7)].map((_, index) => (
-          <InfluencerCard
-            name="Imie Nazwisko"
-            description="Opis"
-            socials={{
-              instagram: { link: "/", isFollowing: true },
-              facebook: { link: "/", isFollowing: false },
-              tiktok: { link: "/", isFollowing: false },
-              x: { link: "/", isFollowing: false },
-            }}
-            key={index}
-          />
+        {influencers.map((influencer) => (
+          <InfluencerCard key={influencer.name} {...influencer} />
         ))}
       </div>
     </div>
