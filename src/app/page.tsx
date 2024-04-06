@@ -1,6 +1,6 @@
 export default function Home() {
   return (
-    <main className="min-h-[89vh]">
+    <main className="">
       <span>no siema</span>
     </main>
   );
