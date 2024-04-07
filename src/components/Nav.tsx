@@ -11,7 +11,12 @@ const Nav = () => {
 
   return (
     <div className="flex justify-around border-t py-4">
-      <button onClick={() => setActive("/")}>
+      <button onClick={() => {
+        setActive("/");
+        setTimeout(() => {
+          window.location.reload()
+        }, 300);
+      }}>
         <Link href="/">
           <IconHome2
             size={36}
