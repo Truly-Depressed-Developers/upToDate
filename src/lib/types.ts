@@ -3,6 +3,7 @@ export type Influencer = {
   name: string;
   shortName: string;
   description: string;
+  hashtags: string[];
   socials: {
     instagram: { link: string; isFollowing: boolean };
     facebook: { link: string; isFollowing: boolean };

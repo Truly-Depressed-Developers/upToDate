@@ -6,6 +6,7 @@ export const influencers: Influencer[] = [
     name: "Max Verstappen",
     shortName: "Max",
     description: "Formula 1 Driver",
+    hashtags: ["#F1", "#RedBullRacing"],
     socials: {
       instagram: {
         link: "https://www.instagram.com/maxverstappen1/",
@@ -27,6 +28,7 @@ export const influencers: Influencer[] = [
     name: "Ronnie Coleman",
     shortName: "Ronnie",
     description: "Bodybuilder",
+    hashtags: ["#Bodybuilding", "#Fitness"],
     socials: {
       instagram: {
         link: "https://www.instagram.com/ronniecoleman8/",
@@ -48,6 +50,7 @@ export const influencers: Influencer[] = [
     name: "Theo Browne",
     shortName: "Theo",
     description: "Influencer",
+    hashtags: ["#Influencer", "#SoftwareEngineer"],
     socials: {
       instagram: {
         link: "https://www.instagram.com/theobrowne/",
@@ -69,6 +72,7 @@ export const influencers: Influencer[] = [
     name: "Scuderia Ferrari",
     shortName: "Ferrari",
     description: "Formula 1 Team",
+    hashtags: ["#F1", "#ScuderiaFerrari"],
     socials: {
       instagram: {
         link: "https://www.instagram.com/scuderiaferrari/",
@@ -90,6 +94,7 @@ export const influencers: Influencer[] = [
     name: "The Weeknd",
     shortName: "Weeknd",
     description: "Singer",
+    hashtags: ["#Music", "#TheWeeknd"],
     socials: {
       instagram: {
         link: "https://www.instagram.com/theweeknd/",
@@ -111,6 +116,7 @@ export const influencers: Influencer[] = [
     name: "Michael O'Hearn",
     shortName: "Michael",
     description: "Bodybuilder",
+    hashtags: ["#Bodybuilding", "#Fitness"],
     socials: {
       instagram: {
         link: "https://www.instagram.com/mikeohearn/",
@@ -132,6 +138,7 @@ export const influencers: Influencer[] = [
     name: "Dua Lipa",
     shortName: "Dua",
     description: "Singer",
+    hashtags: ["#Music", "#DuaLipa"],
     socials: {
       instagram: {
         link: "https://www.instagram.com/dualipa/",

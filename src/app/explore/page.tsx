@@ -9,8 +9,12 @@ import React from "react";
 const Explore = () => {
   const search = useSearchParams().get("search");
 
-  const filteredInfluencers = influencers.filter((influencer) =>
-    influencer.name.toLowerCase().includes(search?.toLowerCase() ?? ""),
+  const filteredInfluencers = influencers.filter(
+    (influencer) =>
+      influencer.name.toLowerCase().includes(search?.toLowerCase() ?? "") ||
+      influencer.hashtags.some((tag) =>
+        tag.toLowerCase().includes(search?.toLowerCase() ?? ""),
+      ),
   );
 
   return (
