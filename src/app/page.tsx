@@ -52,11 +52,13 @@ export default function Home() {
   return (
     <main>
       <div className="border-b pb-1">
-        <h1 className="pt-4 text-center text-4xl font-bold">LOGO</h1>
+        <div className="w-[100%] h-[100px] flex justify-center items-center">
+          <img src="/logo.png" alt="LOGO" />
+        </div>
         <InfluencerFilter />
         <DateFilter />
       </div>
-      <div className="no-scrollbar flex-center flex max-h-[662px] flex-col items-center justify-start overflow-scroll">
+      <div className="no-scrollbar flex-center flex max-h-[620px] flex-col items-center justify-start overflow-scroll">
         {filteredPosts.map((el: PostType, i: number) => {
           return (
             <Post
@@ -67,6 +69,7 @@ export default function Home() {
               subtitle={el.subtitle}
               content={el.content}
               date={el.date}
+              platform={el.platform}
             />
           );
         })}

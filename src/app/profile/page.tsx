@@ -32,8 +32,8 @@ import { chartData } from "@/data/chartdata";
 const Profile = () => {
   return (
     <div>
-      <div className="border-b p-4">
-        <h1 className="text-center text-4xl font-bold">LOGO</h1>
+      <div className="border-b p-4 w-[100%] flex justify-center items-center">
+        <img src="/logo.png" alt="LOGO" />
       </div>
       <div className="flex flex-col space-y-4 p-6">
         <Card className="flex h-[80px] flex-row items-center justify-around">

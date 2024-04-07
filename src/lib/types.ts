@@ -21,6 +21,7 @@ export type Post = {
   subtitle: string;
   content: string;
   date: Date;
+  platform: string;
 };
 
 export type BadgeTypes = "All" | "Today" | "Week" | "Month" | "3mo" | "Year";
