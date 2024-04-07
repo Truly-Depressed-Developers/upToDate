@@ -3,7 +3,8 @@
 import React from "react";
 import { Badge } from "./ui/badge";
 import { useRouter, useSearchParams } from "next/navigation";
-import { type BadgeTypes } from "@/lib/types";
+
+type BadgeTypes = "All" | "Today" | "Week" | "Month" | "3mo" | "Year";
 
 const DateFilter = () => {
   const [chosen, setChosen] = React.useState<BadgeTypes>("All");

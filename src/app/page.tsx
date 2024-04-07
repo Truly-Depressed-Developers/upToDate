@@ -34,18 +34,20 @@ export default function Home() {
   const influencer = searchParams.get("influencer") || "";
   const date = searchParams.get("date") || "";
 
-  const filteredPosts = posts.filter((post) => {
-    const startDate = getStartDate(date as BadgeTypes);
-    if (influencer.length > 0 && date.length > 0) {
-      return post.author === influencer && new Date(post.date) >= startDate;
-    } else if (influencer.length > 0) {
-      return post.author === influencer;
-    } else if (date.length > 0) {
-      return new Date(post.date) >= startDate;
-    } else {
-      return true;
-    }
-  });
+  const filteredPosts = posts
+    .filter((post) => {
+      const startDate = getStartDate(date as BadgeTypes);
+      if (influencer.length > 0 && date.length > 0) {
+        return post.author === influencer && new Date(post.date) >= startDate;
+      } else if (influencer.length > 0) {
+        return post.author === influencer;
+      } else if (date.length > 0) {
+        return new Date(post.date) >= startDate;
+      } else {
+        return true;
+      }
+    })
+    .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
 
   return (
     <main>
