@@ -18,7 +18,7 @@ const Explore = () => {
       <div className="border-b p-4 px-10">
         <Search />
       </div>
-      <div className="max-h-[82.75vh] overflow-auto pb-4">
+      <div className="max-h-[80vh] overflow-auto pb-4">
         {filteredInfluencers.map((influencer) => (
           <InfluencerCard key={influencer.name} {...influencer} />
         ))}

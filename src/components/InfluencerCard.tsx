@@ -48,7 +48,12 @@ const InfluencerCard = (props: InfluencerWithoutImage) => {
                       </>
                     ) : (
                       <>
-                        <Link href={"/"} className="flex pl-3">
+                        <Link
+                          href={instagram.link}
+                          className="flex pl-3"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
                           Follow
                           <IconExternalLink className="ml-2 mt-1" size={16} />
                         </Link>
@@ -61,7 +66,12 @@ const InfluencerCard = (props: InfluencerWithoutImage) => {
                       <Button disabled>Followed</Button>
                     ) : (
                       <>
-                        <Link target="_blank" href={"/"} className="flex pl-3">
+                        <Link
+                          target="_blank"
+                          href={x.link}
+                          rel="noopener noreferrer"
+                          className="flex pl-3"
+                        >
                           Follow
                           <IconExternalLink className="ml-2 mt-1" size={16} />
                         </Link>
@@ -77,7 +87,12 @@ const InfluencerCard = (props: InfluencerWithoutImage) => {
                       </Button>
                     ) : (
                       <>
-                        <Link href={"/"} className="flex pl-3">
+                        <Link
+                          href={tiktok.link}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="flex pl-3"
+                        >
                           Follow
                           <IconExternalLink className="ml-2 mt-1" size={16} />
                         </Link>
@@ -89,7 +104,12 @@ const InfluencerCard = (props: InfluencerWithoutImage) => {
                     {facebook.isFollowing ? (
                       <Button disabled>Followed</Button>
                     ) : (
-                      <Link href={"/"} className="flex pl-3">
+                      <Link
+                        href={facebook.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex pl-3"
+                      >
                         Follow
                         <IconExternalLink className="ml-2 mt-1" size={16} />
                       </Link>
