@@ -13,11 +13,13 @@ export type Influencer = {
 
 export type InfluencerWithoutImage = Omit<Influencer, "image">;
 
-export type PostJson = {
+export type Post = {
   id: number;
   title: string;
+  author: string;
   subtitle: string;
   content: string;
-  image: string;
-  date: string;
+  date: Date;
 };
+
+export type BadgeTypes = "All" | "Today" | "Week" | "Month" | "3mo" | "Year";

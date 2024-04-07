@@ -13,7 +13,7 @@ import { Button } from "./ui/button";
 import { Label } from "./ui/label";
 import Link from "next/link";
 import { IconCheckbox, IconExternalLink } from "@tabler/icons-react";
-import { InfluencerWithoutImage } from "@/lib/types";
+import { type InfluencerWithoutImage } from "@/lib/types";
 
 const InfluencerCard = (props: InfluencerWithoutImage) => {
   const { name, description, socials } = props;
