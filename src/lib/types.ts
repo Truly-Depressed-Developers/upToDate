@@ -41,5 +41,5 @@ export type User = {
 export type ChartData = {
   "This week": number;
   "Last week": number;
-  time: number;
+  day: string;
 }[];

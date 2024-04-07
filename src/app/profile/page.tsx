@@ -1,7 +1,15 @@
 "use client";
 
 import React from "react";
-import { LineChart, Line, Legend, ResponsiveContainer } from "recharts";
+import {
+  LineChart,
+  Line,
+  Legend,
+  ResponsiveContainer,
+  Tooltip,
+  XAxis,
+  YAxis,
+} from "recharts";
 import {
   Card,
   CardContent,
@@ -46,7 +54,7 @@ const Profile = () => {
             </Button>
           </div>
         </Card>
-        <Card className="p-4">
+        <Card className="p-4 pb-0">
           <CardContent className="flex flex-col space-y-2">
             <span className="flex items-center space-x-2">
               <IconBrandFacebook size={20} />
@@ -56,7 +64,7 @@ const Profile = () => {
                   Connected
                 </Button>
               ) : (
-                <Button>Connect</Button>
+                <Button className="w-[107px]">Connect</Button>
               )}
             </span>
             <span className="flex items-center space-x-2">
@@ -67,7 +75,7 @@ const Profile = () => {
                   Connected
                 </Button>
               ) : (
-                <Button>Connect</Button>
+                <Button className="w-[107px]">Connect</Button>
               )}
             </span>
             <span className="flex items-center space-x-2">
@@ -78,7 +86,7 @@ const Profile = () => {
                   Connected
                 </Button>
               ) : (
-                <Button>Connect</Button>
+                <Button className="w-[107px]">Connect</Button>
               )}
             </span>
             <span className="flex items-center space-x-2">
@@ -89,7 +97,7 @@ const Profile = () => {
                   Connected
                 </Button>
               ) : (
-                <Button>Connect</Button>
+                <Button className="w-[107px]">Connect</Button>
               )}
             </span>
             <span className="flex items-center space-x-2">
@@ -100,23 +108,31 @@ const Profile = () => {
                   Connected
                 </Button>
               ) : (
-                <Button>Connect</Button>
+                <Button className="w-[107px]">Connect</Button>
               )}
             </span>
           </CardContent>
         </Card>
         <Card>
-          <CardContent className="h-full">
+          <CardContent className="h-80">
             <ResponsiveContainer width="100%" height="100%">
               <LineChart
                 data={chartData}
                 margin={{
-                  top: 5,
-                  right: 10,
-                  left: 10,
+                  top: 30,
+                  right: 5,
+                  left: 5,
                   bottom: 0,
                 }}
               >
+                <XAxis dataKey="day" />
+                <Tooltip
+                  contentStyle={{
+                    backgroundColor: "hsl(20, 14.3%, 4.1%)", // Change this to your desired color
+                    borderRadius: "5px",
+                    padding: "10px",
+                  }}
+                />
                 <Legend />
                 <Line
                   type="monotone"
