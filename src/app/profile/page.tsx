@@ -105,7 +105,7 @@ const Profile = () => {
             </span>
           </CardContent>
         </Card>
-        <Card className="h-96">
+        <Card>
           <CardContent className="h-full">
             <ResponsiveContainer width="100%" height="100%">
               <LineChart
