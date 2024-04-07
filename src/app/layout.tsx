@@ -18,7 +18,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={cn(inter.className, "dark")}>
+      <body
+        className={cn(inter.className, "dark flex flex-col justify-between")}
+      >
         {children}
         <Nav />
       </body>

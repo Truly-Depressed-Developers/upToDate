@@ -1,7 +1,7 @@
 import React from "react";
 
 const Profile = () => {
-  return <div className="min-h-[89vh]">Profile</div>;
+  return <div className="">Profile</div>;
 };
 
 export default Profile;
