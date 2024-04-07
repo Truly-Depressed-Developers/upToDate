@@ -1,27 +1,25 @@
+"use client";
+
 import InfluencerCard from "@/components/InfluencerCard";
-import { Input } from "@/components/ui/input";
+import Search from "@/components/Search";
 import { influencers } from "@/data/people";
-import { IconSearch } from "@tabler/icons-react";
+import { useSearchParams } from "next/navigation";
 import React from "react";
 
 const Explore = () => {
+  const search = useSearchParams().get("search");
+
+  const filteredInfluencers = influencers.filter((influencer) =>
+    influencer.name.toLowerCase().includes(search?.toLowerCase() ?? ""),
+  );
+
   return (
     <div>
       <div className="border-b p-4 px-10">
-        <span className="relative">
-          <Input
-            className="rounded-xl border-primary bg-[#D9D9D9]/10 pl-10 placeholder:text-primary"
-            type="search"
-            placeholder="Search..."
-          />
-          <IconSearch
-            size={16}
-            className="absolute left-4 top-7 text-primary/30"
-          />
-        </span>
+        <Search />
       </div>
-      <div className="max-h-[82.75vh] overflow-auto">
-        {influencers.map((influencer) => (
+      <div className="max-h-[82.75vh] overflow-auto pb-4">
+        {filteredInfluencers.map((influencer) => (
           <InfluencerCard key={influencer.name} {...influencer} />
         ))}
       </div>
