@@ -2,8 +2,9 @@ import { Influencer } from "@/lib/types";
 
 export const influencers: Influencer[] = [
   {
-    image: "",
+    image: "max.jpg",
     name: "Max Verstappen",
+    shortName: "Max",
     description: "Formula 1 Driver",
     socials: {
       instagram: {
@@ -22,8 +23,9 @@ export const influencers: Influencer[] = [
     },
   },
   {
-    image: "",
+    image: "ronnie.webp",
     name: "Ronnie Coleman",
+    shortName: "Ronnie",
     description: "Bodybuilder",
     socials: {
       instagram: {
@@ -42,8 +44,9 @@ export const influencers: Influencer[] = [
     },
   },
   {
-    image: "",
+    image: "theo.jpg",
     name: "Theo Browne",
+    shortName: "Theo",
     description: "Influencer",
     socials: {
       instagram: {
@@ -62,13 +65,14 @@ export const influencers: Influencer[] = [
     },
   },
   {
-    image: "",
+    image: "ferrari.jpg",
     name: "Scuderia Ferrari",
+    shortName: "Ferrari",
     description: "Formula 1 Team",
     socials: {
       instagram: {
         link: "https://www.instagram.com/scuderiaferrari/",
-        isFollowing: true,
+        isFollowing: false,
       },
       facebook: {
         link: "https://www.facebook.com/ScuderiaFerrari/",
@@ -82,8 +86,9 @@ export const influencers: Influencer[] = [
     },
   },
   {
-    image: "",
+    image: "weeknd.jpeg",
     name: "The Weeknd",
+    shortName: "Weeknd",
     description: "Singer",
     socials: {
       instagram: {
@@ -102,8 +107,9 @@ export const influencers: Influencer[] = [
     },
   },
   {
-    image: "",
-    name: "Michael Hearn",
+    image: "michael.jpg",
+    name: "Michael O'Hearn",
+    shortName: "Michael",
     description: "Bodybuilder",
     socials: {
       instagram: {
@@ -122,8 +128,9 @@ export const influencers: Influencer[] = [
     },
   },
   {
-    image: "",
+    image: "dua.jpg",
     name: "Dua Lipa",
+    shortName: "Dua",
     description: "Singer",
     socials: {
       instagram: {
