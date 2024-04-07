@@ -23,3 +23,22 @@ export type Post = {
 };
 
 export type BadgeTypes = "All" | "Today" | "Week" | "Month" | "3mo" | "Year";
+
+export type User = {
+  image: string;
+  handle: string;
+  name: string;
+  connectedAccounts: {
+    facebook: boolean;
+    instagram: boolean;
+    threads: boolean;
+    x: boolean;
+    tiktok: boolean;
+  };
+};
+
+export type ChartData = {
+  "This week": number;
+  "Last week": number;
+  time: number;
+}[];
