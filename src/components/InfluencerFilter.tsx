@@ -21,7 +21,7 @@ const InfluencerFilter = () => {
   };
 
   return (
-    <div className="no-scrollbar flex space-x-8 overflow-x-auto p-4 pb-2">
+    <div className="no-scrollbar ml-2 flex space-x-8 overflow-x-auto p-4 pb-2">
       {influencers.map((influencer, i) => (
         <button
           key={i}

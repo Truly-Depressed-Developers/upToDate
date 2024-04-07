@@ -11,6 +11,7 @@ import {
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { type Post as PostType } from "@/lib/types";
 import { influencers } from "@/data/people";
+import { IconBrandInstagram } from "@tabler/icons-react";
 
 export default function Post(props: PostType) {
   const avatar = influencers.find(
@@ -26,8 +27,11 @@ export default function Post(props: PostType) {
             <AvatarFallback>IMG</AvatarFallback>
           </Avatar>
         </span>
-        <span className="ml-30">
-          <CardTitle>{props.title}</CardTitle>
+        <span className="mx-1 w-full">
+          <CardTitle className="flex w-full items-start justify-between">
+            {props.title}
+            <IconBrandInstagram size={20} />
+          </CardTitle>
           <CardDescription>{props.subtitle}</CardDescription>
         </span>
       </CardHeader>
